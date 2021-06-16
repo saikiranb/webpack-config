@@ -1,3 +1,4 @@
+import './styles/index.scss'
 const sakiReciepe = {
     dal: 2,
     rice: 1,
