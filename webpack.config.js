@@ -11,12 +11,20 @@ if(process.env.NODE_ENV === "production"){
 module.exports = {
     mode: mode,
     target:target,
+    output: {
+        assetModuleFilename: "images/[hash][ext][query]"
+    },
 
     module: {
         rules: [
             {
                 test:/\.(png|jpe?g|gif|svg)$/i,
-                type:"asset/resource",
+                type:"asset",
+                parser: {
+                    dataUrlCondition:{
+                        maxSize: 30 * 1024,
+                    },
+                },
             },
             {
                 test: /\.s?css$/i,
