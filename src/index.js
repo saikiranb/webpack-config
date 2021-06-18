@@ -1,15 +1,6 @@
-import './styles/index.scss'
-const sakiReciepe = {
-    dal: 2,
-    rice: 1,
-    oil: 1
-}
+import {render} from 'react-dom'
+import App from './components/App'
 
-const sakiNewReceipe = {
-    ...sakiReciepe,
-    cook: "oven",
-    oil: 1,
-}
+render(<App />, document.getElementById("root"))
 
-console.log(sakiReciepe)
-console.log(sakiNewReceipe)
+
